@@ -52,7 +52,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: ['vue-style-loader', 'css-loader', 'sass-loader']
+                use: ['vue-style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
             },
         ]
     },
@@ -65,10 +65,12 @@ module.exports = {
         new CleanWebpackPlugin(),
     ],
     resolve: {
+        extensions: ['.js', '.vue', '.json'],
         alias: {
             'vue': 'vue/dist/vue.js',
-            '@': resolve('src'),
-            'assets': resolve('src/assets')
+            '@': path.resolve(__dirname, '../src'),
+            'assets': path.resolve(__dirname, '../src/assets'),
+            'scss': path.resolve(__dirname, '../src/assets/styles/scss')
         }
     }
 }
