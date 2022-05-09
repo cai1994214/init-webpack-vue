@@ -1,12 +1,17 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 </script>
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite1" :total="1" />
+  <router-link to="/">home</router-link>
+  <router-link to="/mine">mine</router-link>
+
+  <router-view></router-view>
 </template>
 
 <style>
