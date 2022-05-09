@@ -1,20 +1,21 @@
+<script setup lang="ts">
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import HelloWorld from './components/HelloWorld.vue'
+</script>
+
 <template>
-  <div class="content">
-    <main-header></main-header>
-    <main-todo></main-todo>
-  </div>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite1" :total="1" />
 </template>
 
-<script>
-// import "./assets/styles/global.styl";
-import "scss/base.scss";
-import MainHeader from "./component/MainHeader/index.vue";
-import MainTodo from "./component/MainTodo/index.vue";
-export default {
-  name: "App",
-  components: {
-    MainHeader: MainHeader,
-    MainTodo: MainTodo,
-  },
-};
-</script>
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
