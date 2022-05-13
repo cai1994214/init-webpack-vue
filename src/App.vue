@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
+import HelloWorld from './components/HelloWorld.vue';
+import { useRoute } from 'vue-router';
+const route = useRoute();
+const aa = '';
+console.log(aa);
+function bb() {}
+bb();
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite1" :total="1" />
   <router-link to="/">home</router-link>
   <router-link to="/mine">mine</router-link>
@@ -14,7 +16,7 @@ const router = useRouter();
   <router-view></router-view>
 </template>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
