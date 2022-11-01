@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
 import { useRoute } from 'vue-router';
 const route = useRoute();
 const aa = '';
