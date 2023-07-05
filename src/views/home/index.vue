@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import IndexDB from '@/utils/indexDB'
-
+import { Home } from './index.d'
 const { t } = useI18n()
 const airbnbDB = new IndexDB('airbnbDB')
 // 打开数据库 数据库名称 主键 索引数组
@@ -28,7 +28,6 @@ console.log(useI18n().t, 'useI18n');
 
 <template>
   <div>
-  {{ t('message.home') }}
   <el-button @click="addDB('elephant')">增加数据</el-button>
   <el-button @click="deleteDB('elephant', 2)">删除数据</el-button>
   <el-button @click="getAllData('elephant')">查询所有数据</el-button>
