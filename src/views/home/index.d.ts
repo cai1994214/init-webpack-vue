@@ -1,1 +1,0 @@
-export const Home: React.FC<HomeProps>;

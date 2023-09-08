@@ -14,21 +14,17 @@ const changeLang = (res: any) => {
 
 <template>
   <el-config-provider :locale="language">
-    <button @click="changeLang(zhCn)">中文</button>
-    <button @click="changeLang(en)">英文</button>
-    <router-link to="/">{{ t('message.home') }}</router-link> / 
-    <router-link to="/mine">{{ t('message.mine') }}</router-link>
     <router-view></router-view>
   </el-config-provider>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+// #app {
+//   font-family: Avenir, Helvetica, Arial, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   text-align: center;
+//   color: #2c3e50;
+//   margin-top: 60px;
+// }
 </style>

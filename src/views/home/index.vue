@@ -1,39 +1,47 @@
-<script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import IndexDB from '@/utils/indexDB'
-import { Home } from './index.d'
-const { t } = useI18n()
-const airbnbDB = new IndexDB('airbnbDB')
-// 打开数据库 数据库名称 主键 索引数组
-airbnbDB.openStore('elephant', 'id', ['nose', 'ear', 'mouth'])
-// 增和改
-function addDB(storeName: string) {
-  airbnbDB.updateItem(storeName, {id: 1, nose: '修改', ear: '44em', mouth: 'big' })
-}
-// 删
-function deleteDB(storeName: string, id: number) {
-  airbnbDB.deleteItem(storeName, id)
-}
-// 查询所有数据
-function getAllData(storeName: string) {
-  airbnbDB.getList(storeName)
-}
-// 查询单条数据
-function getData(storeName: string, id: number) {
-  airbnbDB.getItem(storeName, id)
-}
-console.log(useI18n().t, 'useI18n');
-
+<script setup>
+import Collepse from '@/components/Collepse.vue'
+import CollepseItem from '@/components/CollepseItem.vue'
+import { ref } from 'vue'
+const arrs = ref([
+  {
+    title: "基本信息",
+    value:
+      "xxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\n",
+  },
+  {
+    title: "创新点(0)",
+    value:
+      "xxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\n",
+  },
+  {
+    title: "附件(0)",
+    value:
+      "xxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\n",
+  },
+  {
+    title: "发明人 (0) ",
+    value:
+      "xxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\n",
+  },
+  {
+    title: "奖励人 (0) ",
+    value:
+      "xxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\nxxxxxx\n",
+  },
+]);
 </script>
-
 <template>
   <div>
-  <el-button @click="addDB('elephant')">增加数据</el-button>
-  <el-button @click="deleteDB('elephant', 2)">删除数据</el-button>
-  <el-button @click="getAllData('elephant')">查询所有数据</el-button>
-  <el-button @click="getData('elephant', 3)">查询个别数据</el-button>
+    <Collepse>
+      <CollepseItem
+        v-for="(item, index) in arrs"
+        :key="index"
+        :title="item.title"
+      >
+        <pre>{{ item.value }}</pre>
+      </CollepseItem>
+    </Collepse>
   </div>
-  
 </template>
 
 <style lang="scss" scoped></style>
