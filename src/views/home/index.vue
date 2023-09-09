@@ -28,7 +28,7 @@
 
 <style lang="scss" scoped>
 .news {
-  width: 750px;
+  max-width: 750px;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -78,10 +78,12 @@
     text-align: center;
     margin: 0;
   }
+
   img {
     max-width: 600px;
   }
 }
+
 .tips {
   text-align: right;
   font-size: 14px;
@@ -89,5 +91,24 @@
   font-weight: 600;
   margin-right: 6px;
   margin-top: 50px;
+}
+
+@media screen and (max-width: 750px) {
+  .top-cont {
+    .title {
+      padding: 0 15px;
+    }
+    .line {
+      width: 95%;
+    }
+  }
+  .text-cont {
+    width: 95%;
+    img {
+      width: 100%;
+      min-width: 300px;
+      max-width: 600px;
+    }
+  }
 }
 </style>
