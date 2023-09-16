@@ -11,5 +11,6 @@
 html, body {
   padding: 0;
   margin: 0;
+  background: #f5f5f5;
 }
 </style>

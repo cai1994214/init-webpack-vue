@@ -5,10 +5,10 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 const routers = [
   {
     path: '/',
-    redirect: '/home',
+    redirect: '/shenzhenwanbao',
   },
   {
-    path: '/home',
+    path: '/shenzhenwanbao',
     component: Home,
   },
 ];

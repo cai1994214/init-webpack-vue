@@ -1,6 +1,11 @@
-
 <template>
-  <div class="news">
+  <div class="news" ref="newsRef">
+    <div class="logoTitle">
+    <div class="cont">
+      <img src="http://wb.sznews.com/tqPad/webimages/pic01.png" alt="">
+      <img src="http://wb.sznews.com/tqPad/webimages/pic-logo.jpg" alt="">
+    </div>
+  </div>
    <div class="top-cont">
     <h1 class="title">结业啦！珠光社区老龄大学2022年度结业典礼暨教学成果汇报演出圆满落幕</h1>
     <span class="desc">时间：2023-03-06 17:08未知 编辑:乐小编</span>
@@ -27,16 +32,31 @@
 </template>
 
 <style lang="scss" scoped>
+.logoTitle {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: start;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #e8e8e8;
+  .cont {
+    padding: 10px;
+   
+    max-width: 750px;
+    box-sizing: border-box;
+  }
+}
 .news {
+  box-sizing: border-box;
   max-width: 750px;
-  padding: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  border: 1px solid #d3dbe6 ;
 }
 .top-cont{
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,12 +79,13 @@
   }
 }
 .text-cont{
+  background: #fff;
+  padding: 0 3%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: auto;
-  width: 80%;
   .cont-item {
     font-family: 宋体;
     font-size: 12pt;
@@ -88,9 +109,11 @@
   text-align: right;
   font-size: 14px;
   color: #8a8a8a;
+  background: #fff;
   font-weight: 600;
-  margin-right: 6px;
-  margin-top: 50px;
+  padding-right: 14px;
+  padding-top: 50px;
+  padding-bottom: 5px;
 }
 
 @media screen and (max-width: 750px) {
@@ -103,7 +126,6 @@
     }
   }
   .text-cont {
-    width: 95%;
     img {
       width: 100%;
       min-width: 300px;
