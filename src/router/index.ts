@@ -1,15 +1,20 @@
 import Home from '../views/home/index.vue';
+import JINGBAO from '../views/jingbao/index.vue';
 
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 const routers = [
   {
     path: '/',
-    redirect: '/shenzhenwanbao',
+    redirect: '/report/shenzhenwanbao',
   },
   {
-    path: '/shenzhenwanbao',
+    path: '/report/shenzhenwanbao',
     component: Home,
+  },
+  {
+    path: '/report/jingbao',
+    component: JINGBAO,
   },
 ];
 

@@ -2,7 +2,7 @@
   <div class="news" ref="newsRef">
     <div class="logoTitle">
     <div class="cont">
-      <img src="http://wb.sznews.com/tqPad/webimages/pic01.png" alt="">
+      <!-- <img src="http://wb.sznews.com/tqPad/webimages/pic01.png" alt=""> -->
       <img src="http://wb.sznews.com/tqPad/webimages/pic-logo.jpg" alt="">
     </div>
   </div>
@@ -35,16 +35,18 @@
 .logoTitle {
   margin-bottom: 12px;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   box-sizing: border-box;
   background: #fff;
   padding: 10px;
   border-bottom: 1px solid #e8e8e8;
   .cont {
     padding: 10px;
-   
     max-width: 750px;
     box-sizing: border-box;
+    & img {
+        height: 30px
+      }
   }
 }
 .news {
