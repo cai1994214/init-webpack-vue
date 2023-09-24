@@ -1,5 +1,7 @@
 <template>
-  <router-view></router-view>
+  <div v-wechat-title="$route.meta.title">
+    <router-view></router-view>
+  </div>
 </template>
 
 <style lang="scss">

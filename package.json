@@ -13,7 +13,8 @@
     "postcss": "^8.4.29",
     "postcss-px-to-viewport-8-plugin": "^1.2.2",
     "vue": "^3.2.25",
-    "vue-i18n": "^9.3.0-beta.6"
+    "vue-i18n": "^9.3.0-beta.6",
+    "vue-wechat-title": "^2.0.7"
   },
   "devDependencies": {
     "@types/node": "^17.0.32",
