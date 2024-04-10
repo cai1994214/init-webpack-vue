@@ -8,7 +8,7 @@
   </div>
    <div class="top-cont">
     <h1 class="title">龙光社区长青老年大学秋季开课啦</h1>
-    <span class="desc">时间：2023-03-06 17:08未知 编辑:乐小编</span>
+    <span class="desc">时间：2023-09-10 21:08未知 编辑:乐小编</span>
     <p class="line"></p>
    </div>
    <div class="text-cont">
